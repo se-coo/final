@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html{height: 100%; font-size: 3rem; background: black;}
+
+		@keyframes spin{
+			to{transform: rotateY(360deg);
+			}
+		}
+
+		.stage{display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100vw;
+			height: 100vh;
+			background: black;
+			perspective: 1000px;}
+
+		.carousel{
+			position: relative;
+			width: 1000px;
+			height: 1000px;
+			transform-style: preserve-3d;
+			animation: spin 80s infinite linear;
+
+		}
+
+		.panel {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: url(1.gif);
+			opacity:0.5; 
+			position: absolute;
+			left: 0;
+			top:0;
+			width:  1000px;
+			height: 1000px;}
+
+		.panel:nth-child(1) {transform: rotateY(0deg)translateZ(1000px);}
+		.panel:nth-child(2) {transform: rotateY(60deg)translateZ(1000px);}
+		.panel:nth-child(3) {transform: rotateY(120deg)translateZ(1000px);}
+		.panel:nth-child(4) {transform: rotateY(180deg)translateZ(1000px);}
+		.panel:nth-child(5) {transform: rotateY(240deg)translateZ(1000px);}
+		.panel:nth-child(6) {transform: rotateY(300deg)translateZ(1000px);}
+		.panel:nth-child(7) {transform: rotateX(90deg)translateZ(600px);}
+		.panel:nth-child(8) {transform: rotateX(90deg)translateZ(-600px);}
+
+		.space {display: flex;
+			position: relative;
+			justify-content: center;
+			align-items: center;
+			width: 50vw;
+			height: 50vh;
+			perspective: 600px;}
+
+		.carousel2{
+			position: relative;
+			width: 200px;
+			height: 200px;
+			transform-style: preserve-3d;
+			animation: spin 100s infinite linear;
+
+		}
+		.panel2 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: rgba(255, 255, 255, 0.5);
+			opacity:0.5; 
+			position: absolute;
+			left: 0;
+			top:0;
+			width:  200px;
+			height: 200px;}
+
+		.panel2:nth-child(1) {transform: translateZ(200px);}
+		.panel2:nth-child(2) {transform: translateZ(200px);}
+		.panel2:nth-child(3) {transform: translateZ(200px);}
+		.panel2:nth-child(4) {transform: translateZ(200px);}
+		.panel2:nth-child(5) {transform: translateZ(200px);}
+		.panel2:nth-child(6) {transform: translateZ(200px);}
+		.panel2:nth-child(7) {transform: translateZ(200px);}
+		.panel2:nth-child(8) {transform: translateZ(200px);}
+		
+
+	</style>
+</head>
+
+<body>
+	<div class="stage">
+		<div class="carousel">
+			<div class="panel">1</div>
+			<div class="panel">2</div>
+			<div class="panel">3</div>
+			<div class="panel">4</div>
+			<div class="panel">5</div>
+			<div class="panel">6</div>
+			<div class="panel">7</div>
+			<div class="panel">8</div>
+		</div>
+	</div>
+	
+	<div class="space">
+		<div class="carousel2"> 
+		<div class="panel2">수</div>
+		<div class="panel2">금</div>
+		<div class="panel2">지</div>
+		<div class="panel2">화</div>
+		<div class="panel2">목</div>
+		<div class="panel2">토</div>
+		<div class="panel2">천</div>
+		<div class="panel2">해</div>
+		</div>
+	</div>
+
+</body>
+</html>
